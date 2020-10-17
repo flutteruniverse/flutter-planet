@@ -1,3 +1,6 @@
-void main(List<String> arguments) {
-  print('Hello world!');
+import 'package:notifications/services/rss_service.dart';
+
+void main(List<String> arguments) async {
+  final rssService = RssService();
+  print('Podcast title: ${await rssService.getLastEpisode()}');
 }
