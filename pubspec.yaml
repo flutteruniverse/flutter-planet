@@ -8,6 +8,7 @@ environment:
 
 dependencies:
   http: ^0.12.2
+  teledart: ^0.0.50
   webfeed: ^0.6.0
 
 dev_dependencies:
