@@ -3,12 +3,12 @@ import 'dart:io';
 
 Future<void> main() async {
   final config = <String, String>{
-    'spotifyClientId': Platform.environment['CLIENT_ID'],
-    'spotifyClientSecret': Platform.environment['CLIENT_SECRET'],
-    'twitterApiKey': Platform.environment['twitterApiKey'],
-    'twitterSecretKey': Platform.environment['twitterSecretKey'],
-    'twitterBearerToken': Platform.environment['twitterBearerToken'],
-    'telegramApiKey': Platform.environment['telegramApiKey']
+    'spotifyClientId': Platform.environment['SPOTIFY_ID'],
+    'spotifyClientSecret': Platform.environment['SPOTIFY_SECRET'],
+    'twitterApiKey': Platform.environment['TWITTER_API_KEY'],
+    'twitterSecretKey': Platform.environment['TWITTER_SECRET_KEY'],
+    'twitterBearerToken': Platform.environment['TWITTER_BEARER_TOKEN'],
+    'telegramApiKey': Platform.environment['TELEGRAM_API_KEY']
   };
 
   final filename = 'lib/config/env.dart';

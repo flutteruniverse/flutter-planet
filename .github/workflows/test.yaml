@@ -1,0 +1,24 @@
+name: Publish podcast episode
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    container:
+      image:  google/dart:latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install dependencies
+      run: pub get
+    - name: Generate env file
+      run: dart .tool/env.dart
+    - name: Lint analyze
+      run: dart analyze
+    - name: Run tests
+      run: pub run test

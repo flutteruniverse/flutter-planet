@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:notifications/services/rss_service.dart';
 import 'package:notifications/services/spotify_service.dart';
 import 'package:notifications/services/telegram_service.dart';
@@ -12,7 +14,7 @@ void main(List<String> arguments) async {
   final episode = await spotifyService.getPodcast();
   if (lastEpisode.compareTo(episode.name) != 0) {
     print('No new episode or some error :(');
-    return;
+    exit(0);
   }
 
   // Init social media services

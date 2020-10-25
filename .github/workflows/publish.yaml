@@ -1,0 +1,23 @@
+name: Test CI
+
+on:
+  schedule:
+      - cron: 0 13 * * 3
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    container:
+      image:  google/dart:latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install dependencies
+      run: pub get
+    - name: Generate env file
+      run: dart .tool/env.dart
+    - name: Publish episode
+      run: dart run ./bin/notifications.dart
+    
