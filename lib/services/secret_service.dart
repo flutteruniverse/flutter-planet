@@ -6,14 +6,16 @@ class SecretService {
     this.spotifyClientSecret,
     this.twitterApiKey,
     this.twitterSecretKey,
-    this.twitterBearerToken,
+    this.twitterToken,
+    this.twitterTokenSecret,
     this.telegramApiKey,
   });
   final String spotifyClientId;
   final String spotifyClientSecret;
   final String twitterApiKey;
   final String twitterSecretKey;
-  final String twitterBearerToken;
+  final String twitterToken;
+  final String twitterTokenSecret;
   final String telegramApiKey;
 
   static SecretService fromJson(Map<String, dynamic> json) {
@@ -22,7 +24,8 @@ class SecretService {
       spotifyClientSecret: json['spotifyClientSecret'] as String,
       twitterApiKey: json['twitterApiKey'] as String,
       twitterSecretKey: json['twitterSecretKey'] as String,
-      twitterBearerToken: json['twitterBearerToken'] as String,
+      twitterToken: json['twitterToken'] as String,
+      twitterTokenSecret: json['twitterTokenSecret'] as String,
       telegramApiKey: json['telegramApiKey'] as String,
     );
   }

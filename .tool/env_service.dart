@@ -7,7 +7,8 @@ Future<void> main() async {
     'spotifyClientSecret': Platform.environment['SPOTIFY_SECRET'],
     'twitterApiKey': Platform.environment['TWITTER_API_KEY'],
     'twitterSecretKey': Platform.environment['TWITTER_SECRET_KEY'],
-    'twitterBearerToken': Platform.environment['TWITTER_BEARER_TOKEN'],
+    'twitterToken': Platform.environment['TWITTER_TOKEN'],
+    'twitterTokenSecret': Platform.environment['TWITTER_TOKEN_SECRET'],
     'telegramApiKey': Platform.environment['TELEGRAM_API_KEY']
   };
 

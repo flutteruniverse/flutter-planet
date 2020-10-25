@@ -13,8 +13,7 @@ class TelegramService {
 
   /// Send message to Telegram group @universoflutter
   /// with link and title episode
-  Future<void> sendMessage({String title, String url}) async {
-    await teledart.telegram.sendMessage(InfoValues.TELEGRAM_CHANNEL,
-        '${InfoValues.TELEGRAM_INIT_MESSAGE}$title\n${InfoValues.TELEGRAM_MID_MESSAGE}$url');
+  Future<void> sendMessage(String message) async {
+    await teledart.telegram.sendMessage(InfoValues.TELEGRAM_CHANNEL, message);
   }
 }
