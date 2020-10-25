@@ -7,6 +7,11 @@ environment:
   sdk: ">=2.8.1 <3.0.0"
 
 dependencies:
+  spotify:
+    git: 
+      url: https://github.com/deandreamatias/spotify-dart.git
+      ref: feature/40
+  dart_twitter_api: ^0.3.4
   http: ^0.12.2
   teledart: ^0.0.50
   webfeed: ^0.6.0
