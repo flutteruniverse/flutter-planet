@@ -1,4 +1,4 @@
-name: Test CI
+name: Publish podcast episode
 
 on:
   schedule:
@@ -17,7 +17,7 @@ jobs:
     - name: Install dependencies
       run: pub get
     - name: Generate env file
-      run: dart .tool/env.dart
+      run: dart .tool/env_service.dart
     - name: Publish episode
       run: dart run ./bin/notifications.dart
     

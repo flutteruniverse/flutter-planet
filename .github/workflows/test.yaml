@@ -1,4 +1,4 @@
-name: Publish podcast episode
+name: Test CI
 
 on:
   push:
@@ -17,7 +17,7 @@ jobs:
     - name: Install dependencies
       run: pub get
     - name: Generate env file
-      run: dart .tool/env.dart
+      run: dart .tool/env_service.dart
     - name: Lint analyze
       run: dart analyze
     - name: Run tests
