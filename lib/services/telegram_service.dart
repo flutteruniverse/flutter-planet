@@ -1,6 +1,7 @@
 import 'package:teledart/teledart.dart';
 import 'package:teledart/telegram.dart';
 
+import '../config/info_values.dart';
 import 'secret_service.dart';
 
 class TelegramService {
@@ -10,7 +11,10 @@ class TelegramService {
     await teledart.start();
   }
 
-  Future<void> sendMessage() async {
-    await teledart.telegram.sendMessage('@universoflutter', 'Test');
+  /// Send message to Telegram group @universoflutter
+  /// with link and title episode
+  Future<void> sendMessage({String title, String url}) async {
+    await teledart.telegram.sendMessage(InfoValues.TELEGRAM_CHANNEL,
+        '${InfoValues.TELEGRAM_INIT_MESSAGE}$title\n${InfoValues.TELEGRAM_MID_MESSAGE}$url');
   }
 }
