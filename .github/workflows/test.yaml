@@ -1,4 +1,4 @@
-name: Test CI
+name: Analyze code
 
 on:
   push:
@@ -20,5 +20,3 @@ jobs:
       run: dart .tool/env_service.dart
     - name: Lint analyze
       run: dart analyze
-    - name: Run tests
-      run: pub run test
