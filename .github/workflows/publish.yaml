@@ -2,7 +2,7 @@ name: Publish podcast episode
 
 on:
   schedule:
-      - cron: 0 13 * * 3
+      - cron: 0 16 * * 3
 
 jobs:
   build:
