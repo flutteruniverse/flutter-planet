@@ -26,6 +26,7 @@ class SpotifyService {
           InfoValues.SPOTIFY_ID,
           market: 'BR',
         );
-    return episodes.first;
+    final episode = (await episodes.first()).items.first;
+    return episode;
   }
 }
