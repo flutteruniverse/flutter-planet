@@ -18,6 +18,8 @@ jobs:
       run: pub get
     - name: Generate env file
       run: dart run .tool/env_service.dart
+    - name: Tests
+      run: dart test
     - name: Publish episode
       run: dart run ./bin/notifications.dart
     
