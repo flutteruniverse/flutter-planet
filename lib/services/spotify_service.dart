@@ -22,7 +22,7 @@ class SpotifyService {
   }
 
   Future<Episode> getPodcast() async {
-    final episodes = await (await spotifyApi).showEpisodes.list(
+    final episodes = await (await spotifyApi).shows.episodes(
           InfoValues.SPOTIFY_ID,
           market: 'BR',
         );
