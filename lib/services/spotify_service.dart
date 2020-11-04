@@ -22,11 +22,15 @@ class SpotifyService {
   }
 
   Future<Episode> getPodcast() async {
-    final episodes = await (await spotifyApi).shows.episodes(
-          InfoValues.SPOTIFY_ID,
-          market: 'BR',
-        );
-    final episode = (await episodes.first()).items.first;
-    return episode;
+    try {
+      final episodes = await (await spotifyApi).shows.episodes(
+            InfoValues.SPOTIFY_ID,
+            market: 'BR',
+          );
+      final episode = (await episodes.first()).items.first;
+      return episode;
+    } catch (e) {
+      throw UnimplementedError('Error to get Spotify podcast episode: $e');
+    }
   }
 }

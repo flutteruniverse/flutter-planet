@@ -8,10 +8,14 @@ class RssService {
 
   /// Get name of last podcast episode
   Future<String> getLastEpisode() async {
-    final response = await client.get(InfoValues.PODCAST_LINK);
-    final rssFeed = RssFeed.parse(response.body);
-    if (!_verifyDate(rssFeed.items.first.pubDate)) return '';
-    return rssFeed.items.first.title;
+    try {
+      final response = await client.get(InfoValues.PODCAST_LINK);
+      final rssFeed = RssFeed.parse(response.body);
+      if (!_verifyDate(rssFeed.items.first.pubDate)) return '';
+      return rssFeed.items.first.title;
+    } catch (e) {
+      throw UnimplementedError('Error to get RSS podcast episode: $e');
+    }
   }
 
   /// Verify if podcast episodes release today

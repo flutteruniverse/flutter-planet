@@ -15,7 +15,7 @@ void main(List<String> arguments) async {
   final lastEpisode = await rssService.getLastEpisode();
   final episode = await spotifyService.getPodcast();
   if (lastEpisode.compareTo(episode.name) != 0) {
-    print('No new episode or some error :(');
+    print('No new episode');
     exit(0);
   }
 
@@ -30,4 +30,6 @@ void main(List<String> arguments) async {
       '${InfoValues.TELEGRAM_INIT_MESSAGE}${episode.name}\n${InfoValues.TELEGRAM_MID_MESSAGE}${episode.externalUrls.spotify}';
   await telegramService.sendMessage(message);
   await twitterService.sendTweet(message);
+
+  exit(0);
 }

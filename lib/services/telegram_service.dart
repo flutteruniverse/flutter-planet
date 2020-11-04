@@ -14,6 +14,17 @@ class TelegramService {
   /// Send message to Telegram group @universoflutter
   /// with link and title episode
   Future<void> sendMessage(String message) async {
-    await teledart.telegram.sendMessage(InfoValues.TELEGRAM_CHANNEL, message);
+    try {
+      final _message = await teledart.telegram
+          .sendMessage(InfoValues.TELEGRAM_CHANNEL, message);
+
+      if (_message != null && _message.date_.day == DateTime.now().day) {
+        print('Send Telegram message');
+        return;
+      }
+      print('Telegram message empty');
+    } catch (e) {
+      print('Error to send Telegram message: $e');
+    }
   }
 }
