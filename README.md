@@ -37,7 +37,7 @@ git clone https://github.com/flutteruniverse/flutter-planet.git
 
 ## Contributing
 
-If you want to take the time to make this project better, please read the [contributing guides](https://github.com/deandreamatias/tv-randshow/blob/master/CONTRIBUTING.md) first. Then, you can open an new [issue](https://github.com/deandreamatias/tv-randshow/issues/new/choose), of a [pull request](https://github.com/deandreamatias/tv-randshow/compare).
+If you want to take the time to make this project better, please read the [contributing guides](https://github.com/flutteruniverse/flutter-planet/blob/master/CONTRIBUTING.md) first. Then, you can open an new [issue](https://github.com/flutteruniverse/flutter-planet/issues/new/choose), of a [pull request](https://github.com/flutteruniverse/flutter-planet/compare).
 
 ## License
 
