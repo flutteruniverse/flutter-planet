@@ -8,7 +8,7 @@ void main() {
       final episode = await rssService.getLastEpisode();
 
       expect(episode, isNotNull);
-      if (episode.isNotEmpty) {
+      if (episode.title.isNotEmpty) {
         expect(episode, contains('| #'));
       }
     });
