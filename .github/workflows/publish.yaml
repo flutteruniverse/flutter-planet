@@ -32,5 +32,5 @@ jobs:
     - name: Tests
       run: dart test
     - name: Publish episode
-      run: dart run ./bin/notifications.dart
+      run: dart run ./bin/main.dart
     
