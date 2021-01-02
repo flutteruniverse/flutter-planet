@@ -8,6 +8,7 @@ A bot to publish new podcast episode and other things about of Universo Flutter
 
 - **Get RSS feed**
 - **Get Spotify podcast episodes**
+- **Parsing and add document to firestore**
 - **Send Telegram message**
 - **Send tweet**
 
