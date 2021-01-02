@@ -13,6 +13,9 @@ void main() {
       expect(secretService.twitterSecretKey, isNotNull);
       expect(secretService.twitterToken, isNotNull);
       expect(secretService.twitterTokenSecret, isNotNull);
+      expect(secretService.firebaseToken, isNotNull);
+      expect(secretService.firebaseUserEmail, isNotNull);
+      expect(secretService.firebaseUserPassword, isNotNull);
 
       expect(secretService.telegramApiKey, isNotEmpty);
       expect(secretService.twitterApiKey, isNotEmpty);
@@ -21,6 +24,9 @@ void main() {
       expect(secretService.twitterTokenSecret, isNotEmpty);
       expect(secretService.spotifyClientId.length, 32);
       expect(secretService.spotifyClientSecret.length, 32);
+      expect(secretService.firebaseToken, isNotEmpty);
+      expect(secretService.firebaseUserEmail, isNotEmpty);
+      expect(secretService.firebaseUserPassword, isNotEmpty);
     });
   });
 }

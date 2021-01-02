@@ -9,7 +9,10 @@ Future<void> main() async {
     'twitterSecretKey': Platform.environment['TWITTER_SECRET_KEY'],
     'twitterToken': Platform.environment['TWITTER_TOKEN'],
     'twitterTokenSecret': Platform.environment['TWITTER_TOKEN_SECRET'],
-    'telegramApiKey': Platform.environment['TELEGRAM_API_KEY']
+    'telegramApiKey': Platform.environment['TELEGRAM_API_KEY'],
+    'firebaseToken': Platform.environment['FIREBASE_TOKEN'],
+    'firebaseUserEmail': Platform.environment['FIREBASE_USER_EMAIL'],
+    'firebaseUserPassword': Platform.environment['FIREBASE_USER_PASSWORD']
   };
 
   final filename = 'lib/config/env.dart';

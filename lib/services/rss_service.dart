@@ -6,13 +6,13 @@ import '../config/info_values.dart';
 class RssService {
   final client = http.Client();
 
-  /// Get name of last podcast episode
-  Future<String> getLastEpisode() async {
+  /// Get last podcast episode
+  Future<RssItem> getLastEpisode() async {
     try {
       final response = await client.get(InfoValues.PODCAST_LINK);
       final rssFeed = RssFeed.parse(response.body);
-      if (!_verifyDate(rssFeed.items.first.pubDate)) return '';
-      return rssFeed.items.first.title;
+      if (!_verifyDate(rssFeed.items.first.pubDate)) return RssItem();
+      return rssFeed.items.first;
     } catch (e) {
       throw UnimplementedError('Error to get RSS podcast episode: $e');
     }

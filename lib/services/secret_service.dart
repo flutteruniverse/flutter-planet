@@ -9,6 +9,9 @@ class SecretService {
     this.twitterToken,
     this.twitterTokenSecret,
     this.telegramApiKey,
+    this.firebaseToken,
+    this.firebaseUserEmail,
+    this.firebaseUserPassword,
   });
   final String spotifyClientId;
   final String spotifyClientSecret;
@@ -17,6 +20,9 @@ class SecretService {
   final String twitterToken;
   final String twitterTokenSecret;
   final String telegramApiKey;
+  final String firebaseToken;
+  final String firebaseUserEmail;
+  final String firebaseUserPassword;
 
   static SecretService fromJson(Map<String, dynamic> json) {
     return SecretService(
@@ -27,6 +33,9 @@ class SecretService {
       twitterToken: json['twitterToken'] as String,
       twitterTokenSecret: json['twitterTokenSecret'] as String,
       telegramApiKey: json['telegramApiKey'] as String,
+      firebaseToken: json['firebaseToken'] as String,
+      firebaseUserEmail: json['firebaseUserEmail'] as String,
+      firebaseUserPassword: json['firebaseUserPassword'] as String,
     );
   }
 

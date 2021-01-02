@@ -12,8 +12,12 @@ class TwitterService {
   );
 
   Future<void> sendTweet(String message) async {
+    if (message.length > 280) {
+      throw UnsupportedError('Message length with more than 280');
+    }
     try {
       await twitterApi.tweetService.update(status: message);
+      print('Send Telegram message');
     } catch (e) {
       print('Error to create tweet: $e');
     }

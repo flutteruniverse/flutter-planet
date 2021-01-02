@@ -1,6 +1,6 @@
 name: notifications
 description: Tool to publish new Universo Flutter episode
-version: 0.1.0
+version: 0.2.0
 homepage: https://universoflutter.com
 
 environment:
@@ -8,6 +8,7 @@ environment:
 
 dependencies:
   dart_twitter_api: ^0.3.4
+  firedart: ^0.8.3
   http: ^0.12.2
   spotify: ^0.4.0
   teledart: ^0.1.1
