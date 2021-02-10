@@ -8,7 +8,7 @@ class InfoValues {
   // Telegram values
   static const String TELEGRAM_CHANNEL = '@universoflutter';
   static const String TELEGRAM_INIT_MESSAGE =
-      'Novo episodio do podcast Universo Flutter 💙🚀\n';
+      'Novo episodio do Universo Flutter 💙🚀\n';
   static const String TELEGRAM_MID_MESSAGE =
-      'Acompanhe o audião do zap de @universoflutter no Spotify, Google Podcast, e outras 7 plataformas\n#flutter #dart #podcast #universoflutter\n';
+      'Acompanhe @universoflutter no Spotify, YouTube e outros agregadores de podcasts\n#flutter #dart #podcast #universoflutter\n';
 }

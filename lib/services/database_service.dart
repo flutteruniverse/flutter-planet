@@ -20,7 +20,7 @@ class FirebaseService {
   Future<void> addDocument(RssItem rssFeed) async {
     final data = await _parsingRssFeed(rssFeed);
     await _firestore.collection('episodes').add(data);
-    print('Added document');
+    print('Firebase - Added document');
   }
 
   Future<Map<String, dynamic>> _parsingRssFeed(RssItem rssFeed) async {
@@ -35,10 +35,8 @@ class FirebaseService {
     var episodeReference = EpisodeReferences(references: []);
 
     // Get episode number
-    final titleEpisode = rssFeed.title;
-    final episode = titleEpisode.split('#').last;
-    print('Number episode: $episode\n');
-    var numberEpisode = int.parse(episode);
+    final numberEpisode = rssFeed.itunes.episode;
+    print('Number episode: ${numberEpisode}\n');
     episodeReference.episode = numberEpisode;
 
     // Get season number

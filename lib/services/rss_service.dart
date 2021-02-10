@@ -14,7 +14,7 @@ class RssService {
       if (!_verifyDate(rssFeed.items.first.pubDate)) return RssItem();
       return rssFeed.items.first;
     } catch (e) {
-      throw UnimplementedError('Error to get RSS podcast episode: $e');
+      throw UnimplementedError('RSS - Error to get podcast episode: $e');
     }
   }
 

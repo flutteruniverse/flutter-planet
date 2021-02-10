@@ -25,6 +25,9 @@ jobs:
         TWITTER_TOKEN: ${{ secrets.TWITTER_TOKEN }}
         TWITTER_TOKEN_SECRET: ${{ secrets.TWITTER_TOKEN_SECRET }}
         TELEGRAM_API_KEY: ${{ secrets.TELEGRAM_API_KEY }}
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        FIREBASE_USER_EMAIL: ${{ secrets.FIREBASE_USER_EMAIL }}
+        FIREBASE_USER_PASSWORD: ${{ secrets.FIREBASE_USER_PASSWORD }}
       run: dart .tool/env_service.dart
     - name: Lint analyze
       run: dart analyze
