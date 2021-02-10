@@ -30,7 +30,7 @@ class SpotifyService {
       final episode = (await episodes.first()).items.first;
       return episode;
     } catch (e) {
-      throw UnimplementedError('Error to get Spotify podcast episode: $e');
+      throw UnimplementedError('Spotify - Error to get podcast episode: $e');
     }
   }
 }

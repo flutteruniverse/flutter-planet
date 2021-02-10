@@ -19,12 +19,12 @@ class TelegramService {
           .sendMessage(InfoValues.TELEGRAM_CHANNEL, message);
 
       if (_message != null && _message.date_.day == DateTime.now().day) {
-        print('Send Telegram message');
+        print('Telegram - Send message');
         return;
       }
-      print('Telegram message empty');
+      print('Telegram - message empty');
     } catch (e) {
-      print('Error to send Telegram message: $e');
+      print('Telegram - Error to send message: $e');
     }
   }
 }
